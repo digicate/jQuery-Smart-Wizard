@@ -164,7 +164,7 @@ function SmartWizard(target, options) {
                     }
                 };
                 if (ajaxurl_data) {
-                    ajax_args = $.extend(ajax_args, ajaxurl_data(stepNum));
+                    ajax_args.data = $.extend(ajax_args.data, ajaxurl_data(stepNum));
                 }
                 $.ajax(ajax_args);
             }
